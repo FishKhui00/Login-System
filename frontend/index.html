@@ -3,26 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Login System</title>
+
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+
     <div class="container">
-      <h2>Login</h2>
 
-      <input type="email" id="email" placeholder="Email" />
-      <input type="password" id="password" placeholder="Password" />
+      <!-- LOGIN FORM -->
+      <div id="loginForm">
 
-      <button onclick="login()">Login</button>
+        <div class="logo">
+          DB_Individual
+        </div>
 
-      <p>Don't have an account?</p>
+        <h2>Welcome back</h2>
 
-      <input type="text" id="name" placeholder="Name" />
-      <button onclick="register()">Register</button>
+        <p class="subtitle">
+          Login to access your dashboard
+        </p>
 
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+        />
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+        />
+
+        <button onclick="login()">
+          Login
+        </button>
+
+        <p class="switch-text">
+          Don't have an account?
+          <span onclick="showRegister()">
+            Register
+          </span>
+        </p>
+
+      </div>
+
+
+      <!-- REGISTER FORM -->
+      <div id="registerForm" class="hidden">
+
+        <div class="logo">
+          DB_Individual
+        </div>
+
+        <h2>Create account</h2>
+
+        <p class="subtitle">
+          Sign up your account to get started
+        </p>
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Full Name"
+        />
+
+        <input
+          type="email"
+          id="registerEmail"
+          placeholder="Email"
+        />
+
+        <input
+          type="password"
+          id="registerPassword"
+          placeholder="Password"
+        />
+
+        <button onclick="register()">
+          Register
+        </button>
+
+        <p class="switch-text">
+          Already have an account?
+          <span onclick="showLogin()">
+            Login
+          </span>
+        </p>
+
+      </div>
+
+
+      <!-- MESSAGE -->
       <p id="message"></p>
+
     </div>
 
+
     <script src="app.js"></script>
+
   </body>
 </html>

@@ -1,39 +1,220 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.container {
-  background: white;
-  padding: 30px;
-  width: 320px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  text-align: center;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #1f2937;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 420px;
+
+  background: #ffffff;
+
+  padding: 40px;
+
+  border-radius: 18px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  color: #2563eb;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h2 {
+  color: #111827;
+
+  font-size: 28px;
+
+  text-align: center;
+
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #6b7280;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  margin-bottom: 28px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  color: #111827;
+
+  transition: 0.2s ease;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+input:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
 button {
   width: 100%;
-  padding: 10px;
-  margin-top: 8px;
+
+  border: none;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  padding: 13px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   LOGIN / REGISTER SWITCH
+========================= */
+
+.switch-text {
+  color: #6b7280;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  margin-top: 22px;
+}
+
+.switch-text span {
+  color: #2563eb;
+
+  font-weight: 600;
+
   cursor: pointer;
 }
 
+.switch-text span:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
 #message {
-  margin-top: 15px;
   text-align: center;
+
+  margin-top: 20px;
+
+  font-size: 14px;
+
+  color: #374151;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+  display: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    padding: 30px 22px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
 }
